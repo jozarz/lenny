@@ -63,7 +63,7 @@ class Lenny
     ears = @ears.sample
     eyes = @eyes.sample
     mouth = @mouths.sample
-    "#{ears.left}#{eyes.left}#{mouth}#{eyes.right}#{ears.right}"
+    "#{ears.left}#{eyes.left}#{mouth.mouth}#{eyes.right}#{ears.right}"
   end
 end
 
@@ -77,7 +77,7 @@ class LennyApp
         {'Content-Type' => 'application/json', 'charset' => 'utf-8'},
         [{
             'response_type' => 'in_channel',
-            'text' => Lenny.make_smily
+            'text' => LENNY.make_smily
         }.to_json]
     ]
   end
