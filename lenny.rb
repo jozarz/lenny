@@ -7,21 +7,21 @@ require 'pry'
 
 class Ear
   attr_reader :left, :right
-  def initialize(string)
+  def initialize(string, tags = [])
     @left, @right = string.split(' ')
   end
 end
 
 class Mouth
   attr_reader :mouth
-  def initialize(string)
+  def initialize(string, tags = [])
     @mouth = string
   end
 end
 
 class Eye
   attr_reader :left, :right
-  def initialize(string, tags = nil)
+  def initialize(string, tags = [])
     @tags = tags
     chars = string.chars
     chars.delete_at(string.length / 2)
