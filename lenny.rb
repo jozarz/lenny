@@ -31,8 +31,8 @@ end
 
 class ElementCreator
   def self.create(path)
-    html = Nokogiri::HTML(File.open path)
-    html.css('select').zip([Eye, Mouth, Ear]).map {|node, _class| map_children(node, _class)}
+    html = Nokogiri::HTML(File.open(path), nil, Encoding::UTF_8.to_s)
+    html.css('select').zip([Mouth, Eye, Ear]).map {|node, _class| map_children(node, _class)}
   end
 
   def self.map_children(node, _class)
@@ -54,7 +54,7 @@ end
 
 
 class Lenny
-  def initialize(ears, mouths, eyes)
+  def initialize(mouths, eyes, ears)
     @ears, @mouths, @eyes = ears, mouths, eyes
   end
 
