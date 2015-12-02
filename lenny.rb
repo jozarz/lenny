@@ -70,7 +70,7 @@ end
 
 
 class LennyApp
-  LENNY = Lenny.new(*ElementCreator.create('lennny.html'))
+  LENNY = Lenny.new(*ElementCreator.create('lenny.html'))
   def call(env)
     [
         200,
