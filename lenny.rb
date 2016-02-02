@@ -88,7 +88,7 @@ class LennyApp
       when '/tags' then good_response(LENNY.tags)
       when '/get'
         if req.params['text'] == 'all' || req.params[:text] == 'all'
-          good_response(LENNY.tags, 'ephemeral')
+          good_response(LENNY.tags.join(' | '), 'ephemeral')
         else
           good_response(LENNY.make_smily(req.params[:text] || req.params['text']))
         end
