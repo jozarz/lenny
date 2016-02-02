@@ -85,28 +85,27 @@ class LennyApp
   def call(env)
     req = Rack::Request.new(env)
     case req.path
-      when '/tags'
-        [
-            200,
-            {'Content-Type' => 'application/json', 'charset' => 'utf-8'},
-            [{
-                 'response_type' => 'in_channel',
-                 'text' => LENNY.tags
-             }.to_json]
-        ]
-
+      when '/tags' then good_response(LENNY.tags)
       when '/get'
-        [
-            200,
-            {'Content-Type' => 'application/json', 'charset' => 'utf-8'},
-            [{
-                 'response_type' => 'in_channel',
-                 'text' => LENNY.make_smily(req.params[:text] || req.params['text'])
-             }.to_json]
-        ]
+        if req.params['text'] == 'all' || req.params[:text] == 'all'
+          good_response(LENNY.tags)
+        else
+          good_response(LENNY.make_smily(req.params[:text] || req.params['text']))
+        end
       else
-        [404,  {'Content-Type' => 'application/json', 'charset' => 'utf-8'}, [{}.to_json]]
+        [404,  {'Content-Type' => 'application/json', 'charset' => 'utf-8'}, ['']]
     end
+  end
+
+  def good_response(response)
+    [
+        200,
+        {'Content-Type' => 'application/json', 'charset' => 'utf-8'},
+        [{
+             'response_type' => 'in_channel',
+             'text' => response
+         }.to_json]
+    ]
   end
 end
 
