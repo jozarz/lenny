@@ -88,7 +88,7 @@ class LennyApp
       when '/tags' then good_response(LENNY.tags)
       when '/get'
         if req.params['text'] == 'all' || req.params[:text] == 'all'
-          good_response(LENNY.tags)
+          good_response(LENNY.tags, 'ephemeral')
         else
           good_response(LENNY.make_smily(req.params[:text] || req.params['text']))
         end
@@ -97,12 +97,12 @@ class LennyApp
     end
   end
 
-  def good_response(response)
+  def good_response(response, response_type = 'in_channel')
     [
         200,
         {'Content-Type' => 'application/json', 'charset' => 'utf-8'},
         [{
-             'response_type' => 'in_channel',
+             'response_type' => response_type,
              'text' => response
          }.to_json]
     ]
