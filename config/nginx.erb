@@ -1,0 +1,22 @@
+upstream yaya_upstream {
+  server unix:/tmp/unicorn.lenny.sock;
+}
+
+server {
+
+  listen 80;
+
+  root <%= root %>;
+  server_name lenny.krakultura.com;
+
+
+  location /upstream/ {
+    proxy_pass http://yaya_upstream/$1$is_args$args;
+    proxy_next_upstream off;
+    proxy_redirect     off;
+    proxy_set_header   Host             $host;
+    proxy_set_header   X-Real-IP        $remote_addr;
+    proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+
+  }
+}

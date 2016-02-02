@@ -18,3 +18,16 @@ set :linked_dirs, ['logs', 'tmp/pids', 'pids']
 after 'deploy:publishing', 'unicorn:reload'
 
 
+namespace :nginx do
+  task :restart do
+    on roles(:app) do
+      within current_path do
+        execute :bundle, 'exec', 'rake prepare:nginx'
+        execute :sudo, 'cp -f tmp/lenny /etc/nginx/sites-available/'
+        execute :sudo, 'sudo service nginx restart'
+      end
+    end
+  end
+end
+
+
