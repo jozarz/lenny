@@ -15,12 +15,12 @@ set :unicorn_pid, -> { File.join(current_path, "pids", "unicorn.pid") }
 set :unicorn_config_path, -> { File.join(current_path, "config", "unicorn.rb") }
 set :linked_dirs, ['logs', 'tmp/pids', 'pids']
 
-after 'deploy:publishing', 'deploy:reload'
+after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
-  task :reload do
+  task :restart do
     invoke 'unicorn:reload'
-    invoke 'nginx:reload'
+    invoke 'nginx:restart'
   end
 end
 

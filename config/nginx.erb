@@ -10,7 +10,7 @@ server {
   server_name lenny.krakultura.com;
 
 
-  location /upstream/ {
+  location / {
     proxy_pass http://yaya_upstream/$1$is_args$args;
     proxy_next_upstream off;
     proxy_redirect     off;
