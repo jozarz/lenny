@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6e57522-30d0-40ff-bf25-3f360a950bf9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lenny.html" afterPath="$PROJECT_DIR$/lenny.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lenny.rb" afterPath="$PROJECT_DIR$/lenny.rb" />
     </list>
@@ -26,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lenny.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lenny.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lenny.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="99.375">
-              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.88832486">
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lenny.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lenny.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lenny.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5609756">
-              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -150,8 +149,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/config/nginx.erb" />
-        <option value="$PROJECT_DIR$/lenny.html" />
         <option value="$PROJECT_DIR$/lenny.rb" />
+        <option value="$PROJECT_DIR$/lenny.html" />
       </list>
     </option>
   </component>
@@ -827,18 +826,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lenny.html">
+    <entry file="file://$PROJECT_DIR$/lenny.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="99.375">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lenny.rb">
+    <entry file="file://$PROJECT_DIR$/lenny.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5609756">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.88832486">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding />
         </state>
       </provider>
