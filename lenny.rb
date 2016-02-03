@@ -42,7 +42,7 @@ class ElementCreator
     node.children.css('option').map do |child|
       attributes =
         if child.attributes['tags']
-          child.attributes['tags'].value.gsub(/\s+/, '').split(',')
+          child.attributes['tags'].value.gsub(/\s+/, '').split(' ')
         else
           []
         end
