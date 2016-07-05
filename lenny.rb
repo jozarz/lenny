@@ -92,6 +92,11 @@ class LennyApp
         else
           good_response(LENNY.make_smily(req.params[:text] || req.params['text']))
         end
+      when '/vote'
+        File.open('voting', 'a') do |file|
+          file.write(req.params['lenny'] + " " + req.params['vote'])
+        end
+        [200, {'Content-Type' => 'application/json', 'charset' => 'utf-8'}, ['']]
       else
         [404,  {'Content-Type' => 'application/json', 'charset' => 'utf-8'}, ['']]
     end
